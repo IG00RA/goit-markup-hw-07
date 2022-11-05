@@ -495,7 +495,7 @@ img {
   margin-right: 93px;
 }
 
-.subscribe-wrap {
+.footer-subscribe-form {
   display: flex;
   gap: 12px;
 }
@@ -535,6 +535,7 @@ img {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  outline: transparent;
 }
 
 .footer-subscribe-input::placeholder {
@@ -569,6 +570,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform var(--time-delay) var(--timing-function);
+  padding: 40px;
 }
 
 .backdrop.is-hidden .modal {
@@ -599,7 +601,89 @@ img {
   visibility: hidden;
 }
 
+.modal-tittle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--tittle-text-color);
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  margin-bottom: 20px;
+}
+.input-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--most-text-color);
+}
+.modal-input {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: transparent;
+  transition: border-color var(--time-delay) var(--timing-function);
+}
+
+.modal-input:focus {
+  border-color: var(--secondary-link-color);
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--secondary-link-color);
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+.modal-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-75%);
+  fill: var(--tittle-text-color);
+  transition: fill var(--time-delay) var(--timing-function);
+}
+.modal-comm {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  outline: transparent;
+  transition: border-color var(--time-delay) var(--timing-function);
+}
+.modal-comm::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-comm:focus {
+  border-color: var(--secondary-link-color);
+}
+.modal-rules {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--most-text-color);
+  text-align: center;
+}
+.rules-link {
+  color: var(--secondary-link-color);
+}
+
 /* Portfolio */
+
 .filter-list {
   display: flex;
   margin-bottom: 50px;
