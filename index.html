@@ -403,14 +403,15 @@
                 </div>
                 <label for="user-comm" class="input-label">Коментар</label>
                 <textarea name="user-comm" id="user-comm" class="modal-comm" placeholder="Введіть текст"></textarea>
-                <div class="checkbox-wrap">
-                    <label class="checkbox-label">
-                        <input type="checkbox" class="checkbox">
-                        <span class="checkbox-icon"></span>
-                        <span class="modal-rules">Погоджуюся з розсилкою та приймаю </span>
-                    </label> <a href="" class="rules-link"> Умови
-                        договору</a>
-                </div>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox visually-hidden">
+                    <span class="checkbox-icon"><svg width="16" height="15">
+                            <use href="./images/icons.svg#icon-uncheck"></use>
+                        </svg></span>
+                    <span class="checkbox-icon-check"><svg width="16" height="15">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg></span>Погоджуюся з розсилкою та приймаю <a href="" class="rules-link">Умови
+                        договору</a></label>
                 <button class="subscribe-btn" type="submit"><span class="subscribe-btn-text">Відправити</span></button>
             </form>
 
