@@ -462,9 +462,7 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
-}
-.footer-adress-container {
-  margin-right: 70px;
+  justify-content: space-between;
 }
 
 .footer-social-list {
@@ -503,9 +501,6 @@ img {
   text-transform: uppercase;
   color: var(--bcgnd-color);
   margin-bottom: 20px;
-}
-.footer-social {
-  margin-right: 93px;
 }
 
 .footer-subscribe-form {
@@ -547,7 +542,7 @@ img {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--bcgnd-color);
   outline: transparent;
 }
 
@@ -624,9 +619,6 @@ img {
   margin-bottom: 12px;
 }
 
-.modal-form {
-  margin-bottom: 20px;
-}
 .input-label {
   display: block;
   margin-bottom: 4px;
@@ -675,6 +667,7 @@ img {
   outline: transparent;
   transition: border-color var(--time-delay) var(--timing-function);
   margin-bottom: 20px;
+  display: block;
 }
 .modal-comm::placeholder {
   font-size: 12px;
@@ -698,19 +691,19 @@ img {
   display: block;
   text-align: center;
   position: relative;
-  padding-left: 16px;
+  margin-left: 16px;
   margin-bottom: 30px;
 }
 .checkbox-icon {
   position: absolute;
-  left: 16px;
-  top: 2px;
+  left: 2px;
+  top: 3px;
 }
 .checkbox-icon-check {
   opacity: 0;
   position: absolute;
-  left: 16px;
-  top: 2px;
+  left: 2px;
+  top: 3px;
 }
 
 .checkbox:checked ~ .checkbox-icon-check {
