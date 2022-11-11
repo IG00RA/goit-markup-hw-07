@@ -22,24 +22,23 @@
   transform: translate(-50%, -50%);
   transition: transform var(--time-delay) var(--timing-function);
   padding: 40px;
-  &-close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: var(--logo-color);
-    transition: fill var(--time-delay) var(--timing-function);
-    &:hover,
-    &:focus {
-      fill: var(--secondary-link-color);
-    }
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  @extend %list-center;
+  justify-content: center;
+  fill: var(--logo-color);
+  transition: fill var(--time-delay) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--secondary-link-color);
   }
 }
 
@@ -81,20 +80,20 @@
   &:focus {
     border-color: var(--secondary-link-color);
   }
-  &-wrap {
-    position: relative;
-    margin-bottom: 10px;
-  }
-  &-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    fill: var(--tittle-text-color);
-    transition: fill var(--time-delay) var(--timing-function);
-    .modal-input:focus + & {
-      fill: var(--secondary-link-color);
-    }
+}
+.modal-input-wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--tittle-text-color);
+  transition: fill var(--time-delay) var(--timing-function);
+  .modal-input:focus + & {
+    fill: var(--secondary-link-color);
   }
 }
 
