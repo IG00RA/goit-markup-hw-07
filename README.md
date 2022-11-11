@@ -1,2 +1,2 @@
-# goit-markup-hw-06
-My sixth homework
+# goit-markup-hw-07
+My seventh HW
