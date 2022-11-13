@@ -13,10 +13,8 @@
 }
 .people__name {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(16, 1.19);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--tittle-text-color);
 }
 .team__name {
@@ -26,10 +24,8 @@
   margin-bottom: 16px;
 }
 .people__text {
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(16, 1.19);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team__social-list {

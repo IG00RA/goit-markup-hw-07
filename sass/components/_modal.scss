@@ -53,10 +53,8 @@
 
 .modal-tittle {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(20, 1.15);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--tittle-text-color);
   margin-bottom: 12px;
 }
@@ -64,9 +62,7 @@
 .input-label {
   display: block;
   margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  @include font(12, 1.17, 0.01);
   color: var(--most-text-color);
 }
 .modal-input {
@@ -77,9 +73,11 @@
   padding-left: 42px;
   outline: transparent;
   transition: border-color var(--time-delay) var(--timing-function);
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: var(--secondary-link-color);
   }
+  cursor: pointer;
 }
 .modal-input-wrap {
   position: relative;
@@ -92,7 +90,8 @@
   transform: translateY(-50%);
   fill: var(--tittle-text-color);
   transition: fill var(--time-delay) var(--timing-function);
-  .modal-input:focus + & {
+  .modal-input:focus + &,
+  .modal-input:hover + & {
     fill: var(--secondary-link-color);
   }
 }
@@ -109,14 +108,14 @@
   margin-bottom: 20px;
   display: block;
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include font(12, 1.17, 0.01);
     color: rgba(117, 117, 117, 0.5);
   }
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: var(--secondary-link-color);
   }
+  cursor: pointer;
 }
 
 .rules-link {
@@ -124,9 +123,7 @@
 }
 
 .checkbox-label {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(14, 1.71);
   color: var(--most-text-color);
   display: block;
   text-align: center;

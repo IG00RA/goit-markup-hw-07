@@ -29,7 +29,7 @@
   overflow: hidden;
 }
 
-.subscribe-btn, .footer-social-link, .footer-social-list, .team__social-link, .team__social-list, .features__icon, .header__contact, .header__container, .header__nav, .modal-close {
+.subscribe-btn, .footer-social-link, .footer-social-list, .team__social-link, .team__social-list, .wrapper, .features__icon, .header__contact, .header__container, .header__nav, .modal-close {
   display: flex;
   align-items: center;
 }
@@ -93,8 +93,8 @@ body {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--tittle-text-color);
 }
 
@@ -163,8 +163,8 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--tittle-text-color);
   margin-bottom: 12px;
 }
@@ -186,8 +186,9 @@ body {
   padding-left: 42px;
   outline: transparent;
   transition: border-color var(--time-delay) var(--timing-function);
+  cursor: pointer;
 }
-.modal-input:focus {
+.modal-input:focus, .modal-input:hover {
   border-color: var(--secondary-link-color);
 }
 
@@ -204,7 +205,7 @@ body {
   fill: var(--tittle-text-color);
   transition: fill var(--time-delay) var(--timing-function);
 }
-.modal-input:focus + .modal-input-icon {
+.modal-input:focus + .modal-input-icon, .modal-input:hover + .modal-input-icon {
   fill: var(--secondary-link-color);
 }
 
@@ -219,6 +220,7 @@ body {
   transition: border-color var(--time-delay) var(--timing-function);
   margin-bottom: 20px;
   display: block;
+  cursor: pointer;
 }
 .modal-comm::-moz-placeholder {
   font-size: 12px;
@@ -238,7 +240,7 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-comm:focus {
+.modal-comm:focus, .modal-comm:hover {
   border-color: var(--secondary-link-color);
 }
 
@@ -303,7 +305,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
-  padding-bottom: 32px;
 }
 
 .menu__link {
@@ -321,7 +322,7 @@ body {
   border-radius: 2px;
   background-color: var(--secondary-link-color);
   position: absolute;
-  bottom: 0px;
+  bottom: -32px;
   transform: scaleX(0);
   transition: transform var(--time-delay) var(--timing-function);
 }
@@ -344,7 +345,7 @@ body {
   border-radius: 2px;
   background-color: var(--secondary-link-color);
   position: absolute;
-  bottom: 0px;
+  bottom: -32px;
   transform: scaleX(0);
   transition: transform var(--time-delay) var(--timing-function);
 }
@@ -385,7 +386,7 @@ body {
   border-radius: 2px;
   background-color: var(--secondary-link-color);
   position: absolute;
-  bottom: 0px;
+  bottom: -32px;
 }
 
 .hero {
@@ -400,8 +401,8 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   margin-right: auto;
   margin-bottom: 30px;
@@ -424,6 +425,12 @@ body {
   text-align: center;
   margin: 0 auto;
   display: block;
+  transition: background-color var(--time-delay) var(--timing-function);
+}
+.hero__btn:hover, .hero__btn:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .overlay {
@@ -479,22 +486,20 @@ body {
 }
 
 .card-set__tittle {
-  padding-top: 27px;
-  padding-bottom: 27px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--bcgnd-color);
-  text-align: center;
 }
 
 .wrapper {
   position: absolute;
   bottom: 0;
-  width: 370px;
+  width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
+  justify-content: center;
 }
 
 .team {
@@ -516,8 +521,8 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--tittle-text-color);
 }
 
@@ -532,8 +537,8 @@ body {
 .people__text {
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .team__social-list {
@@ -735,6 +740,12 @@ body {
   gap: 10px;
   justify-content: center;
   padding: 13px 28px;
+  transition: background-color var(--time-delay) var(--timing-function);
+}
+.subscribe-btn:hover, .subscribe-btn:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .filter-list {
@@ -749,8 +760,8 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--tittle-text-color);
   background-color: var(--filter-secondary-color);
   border-radius: 4px;
@@ -792,7 +803,7 @@ body {
 
 .galery-card {
   font-size: 18px;
-  line-height: 2;
+  line-height: 3;
   letter-spacing: 0.06em;
   color: var(--tittle-text-color);
   margin-bottom: 4px;
@@ -824,7 +835,7 @@ body {
   color: var(--main-hero-color);
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
-  transform: translateY(105%);
+  transform: translateY(101%);
   transition: transform var(--time-delay) var(--timing-function);
 }
 .galery-item:hover .galery-text, .galery-item:focus .galery-text {

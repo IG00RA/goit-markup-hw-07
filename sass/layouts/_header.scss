@@ -30,7 +30,6 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
-  padding-bottom: 32px;
 }
 .menu__link {
   color: var(--tittle-text-color);
@@ -48,7 +47,7 @@
     border-radius: 2px;
     background-color: var(--secondary-link-color);
     position: absolute;
-    bottom: 0px;
+    bottom: -32px;
     transform: scaleX(0);
     transition: transform var(--time-delay) var(--timing-function);
   }
@@ -73,7 +72,7 @@
     border-radius: 2px;
     background-color: var(--secondary-link-color);
     position: absolute;
-    bottom: 0px;
+    bottom: -32px;
     transform: scaleX(0);
     transition: transform var(--time-delay) var(--timing-function);
   }
@@ -89,9 +88,7 @@
 .logo {
   text-decoration: none;
   font-family: "Raleway";
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font(26, 1.19);
 }
 .header__logo {
   margin-right: 93px;
@@ -112,6 +109,6 @@
     border-radius: 2px;
     background-color: var(--secondary-link-color);
     position: absolute;
-    bottom: 0px;
+    bottom: -32px;
   }
 }
